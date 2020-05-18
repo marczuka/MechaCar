@@ -25,7 +25,8 @@ Therefore, we have sufficient evidence to state that those parameters have
 significant impact on the mpg values in the dataset.
 Unfortunately, Intersept value in our model is statistically significant too which
 means that there are other variables and factors that contribute to the variation
-in mpg that have not been included in our model (and into the dataset) and those values may still need to be collected or observed.
+in mpg that have not been included in our model (and into the dataset) and those 
+values may still need to be collected or observed.
 
 Despite that, according to the summary output, the r-squared value of our multiple
 linear regression model is 0.71, which means that roughly 71% of all mpg predictions
@@ -38,6 +39,7 @@ a multiple linear regressions model are not zero for 3 variables: vlength,
 grclearance and AWD.
 
 # Suspension Coil Summary
+
 Suspension coil presented in the dataset is normally distributed and densely gathered
 around the mean and median which are equal to 1498.78 and 1500 respectively.
 
@@ -46,6 +48,7 @@ Variance of the PSI sample distribution is 62.29 which is smaller than 100 pound
 inch so our suspension coils data meets the design specifications for the MechaCar.
 
 # Suspension Coil T-Test
+
 H0: There is no statistical difference between the observed sample mean and its
 population mean.
 Ha: There is a statistical difference between the observed sample mean and its
@@ -60,6 +63,7 @@ statistically similar. This also means that our suspension coils dataset is
 statistically representative.
 
 # Design your own study
+
 If we are planning to sell our vehicle at the same price as our competitors and
 want to outperform the competition we migth want to test if our prototype
 vehicle is more fuel efficient than other comparable vehicles on the market. 
@@ -71,10 +75,10 @@ We would also need to obtain the fuel effcicency mpg levels for our competitors
 vehicles at different distances and weather conditions.
 
 Our collected mpg data should follow the following assumptions:
-1. Input data is numerical and continuous;
+1. The input data is numerical and continuous;
 2. Each sample data is selected randomly from its population.
-3. The input data is considered to be randomly distributed (if our data is 
-slightly skewed we can use logarithm base 10 to fix that).
+3. The input data is considered to be randomly distributed (if our data is slightly 
+skewed we can use logarithm base 10 to fix that).
 4. The input data is reasonably large.
 5. The variance of the two datasets should be similar.
 
@@ -96,4 +100,3 @@ If the resulting p-value would be smaller than 0.05 we would have enougth
 statistical evidence to reject our null hypothesis and state that our Ha is true,
 which would mean that our prototype vehicle outperforms the competition in fuel
 efficiency.
-
