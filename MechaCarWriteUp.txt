@@ -60,10 +60,40 @@ statistically similar. This also means that our suspension coils dataset is
 statistically representative.
 
 # Design your own study
-Compare the performance of the MechaCar prototype vehicle to other comparable 
-vehicles on the market.
-Quantify how the MechaCar outperforms the competition.
-- Metrics of interest to a consumer: cost, fuel efficiency...
-- What H0 and Ha hypothesis would be to answer the main question?
-- What data should be collected?
+If we are planning to sell our vehicle at the same price as our competitors and
+want to outperform the competition we migth want to test if our prototype
+vehicle is more fuel efficient than other comparable vehicles on the market. 
+
+We would need to collect the fuel efficiency mpg levels for our car prototypes at 
+different distances and weather conditions and test if the mean of this set is NOT 
+SMALLER than the mean fuel efficiency mpg for comparable vehicles at the market.
+We would also need to obtain the fuel effcicency mpg levels for our competitors
+vehicles at different distances and weather conditions.
+
+Our collected mpg data should follow the following assumptions:
+1. Input data is numerical and continuous;
+2. Each sample data is selected randomly from its population.
+3. The input data is considered to be randomly distributed (if our data is 
+slightly skewed we can use logarithm base 10 to fix that).
+4. The input data is reasonably large.
+5. The variance of the two datasets should be similar.
+
+Our hypothesis would be the following:
+H0: There is no statistical difference between our mpg dataset and other comparable
+vehicles mpg dataset on the market.
+Ha: The true mean of our mpg dataset is GREATER than the mean of our competitors
+fuel efficiency values dataset.
+
+We would need to use a paired t-test to compare our datasets providing the following
+parameters:
+x - our prototype vehicle mpg dataset as vector of numbers;
+y - our competitors mpg values dataset as vector of numbers;
+paired - must be set to TRUE since we're comparing two sets;
+alternative - must be set to "greater" or "g" to specify that our alternative 
+hypothesis states that x mean is greater than y mean.
+
+If the resulting p-value would be smaller than 0.05 we would have enougth 
+statistical evidence to reject our null hypothesis and state that our Ha is true,
+which would mean that our prototype vehicle outperforms the competition in fuel
+efficiency.
 
